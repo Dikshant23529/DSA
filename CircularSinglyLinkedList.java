@@ -42,6 +42,8 @@ public class CircularSinglyLinkedList {
         forth.next = first;
 
         last = forth;
+
+        length = 4;
     }
 
     /*
@@ -72,12 +74,35 @@ public class CircularSinglyLinkedList {
         }
 
         System.out.print(first.data + "");
+        System.out.println();
+    }
+
+    public void insertFirst(int value) {
+        ListNode temp = new ListNode(value);
+        if (last == null) {
+            last = temp;
+        } 
+        else 
+        {
+            temp.next = last.next;
+        }
+
+        last.next = temp;
+        length++;
     }
 
     public static void main(String[] args) {
+        
         CircularSinglyLinkedList doublyLinkedList = new CircularSinglyLinkedList();
+        
         doublyLinkedList.createCircualLinkedList();
+        
+        doublyLinkedList.insertFirst(10);
+        
         doublyLinkedList.printList();
+
+
+        System.out.println(doublyLinkedList.length());
     }
 
 }
