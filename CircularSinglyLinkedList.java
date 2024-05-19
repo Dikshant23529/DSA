@@ -106,6 +106,23 @@ public class CircularSinglyLinkedList {
         length++;
     }
 
+    public ListNode removelast() {
+
+        ListNode temp = last.next;
+
+        if (last.next == last) {
+            last = null;
+        }
+
+        else {
+            last.next = temp.next;
+        }
+
+        temp.next = null;
+        length--;
+        return temp;
+
+    }
     public static void main(String[] args) {
         
         CircularSinglyLinkedList doublyLinkedList = new CircularSinglyLinkedList();
@@ -116,8 +133,9 @@ public class CircularSinglyLinkedList {
 
         doublyLinkedList.insertLast(20);
 
-        doublyLinkedList.printList();
+        doublyLinkedList.removelast();
 
+        doublyLinkedList.printList();
 
         System.out.println(doublyLinkedList.length());
     }
