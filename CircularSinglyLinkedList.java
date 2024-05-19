@@ -108,6 +108,10 @@ public class CircularSinglyLinkedList {
 
     public ListNode removelast() {
 
+        if (isEmpty()) {
+            throw new IllegalArgumentException("Give the coorect argument");
+        }
+
         ListNode temp = last.next;
 
         if (last.next == last) {
