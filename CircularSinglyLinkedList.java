@@ -129,19 +129,19 @@ public class CircularSinglyLinkedList {
     }
     public static void main(String[] args) {
         
-        CircularSinglyLinkedList doublyLinkedList = new CircularSinglyLinkedList();
+        CircularSinglyLinkedList circularSinglyLinkedList = new CircularSinglyLinkedList();
         
-        doublyLinkedList.createCircualLinkedList();
+        circularSinglyLinkedList.createCircualLinkedList();
         
-        doublyLinkedList.insertFirst(10);
+        circularSinglyLinkedList.insertFirst(10);
 
-        doublyLinkedList.insertLast(20);
+        circularSinglyLinkedList.insertLast(20);
 
-        doublyLinkedList.removelast();
+        circularSinglyLinkedList.removelast();
 
-        doublyLinkedList.printList();
+        circularSinglyLinkedList.printList();
 
-        System.out.println(doublyLinkedList.length());
+        System.out.println(circularSinglyLinkedList.length());
     }
 
 }
