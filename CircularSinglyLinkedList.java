@@ -91,6 +91,21 @@ public class CircularSinglyLinkedList {
         length++;
     }
 
+    public void insertLast(int value){
+        ListNode temp = new ListNode(value);
+        if (last == null) {
+            last = temp;
+            last.next = last;
+        }
+        else
+        {
+            temp.next = last.next;
+            last.next = temp;
+            last = temp;
+        }
+        length++;
+    }
+
     public static void main(String[] args) {
         
         CircularSinglyLinkedList doublyLinkedList = new CircularSinglyLinkedList();
@@ -98,7 +113,9 @@ public class CircularSinglyLinkedList {
         doublyLinkedList.createCircualLinkedList();
         
         doublyLinkedList.insertFirst(10);
-        
+
+        doublyLinkedList.insertLast(20);
+
         doublyLinkedList.printList();
 
 
